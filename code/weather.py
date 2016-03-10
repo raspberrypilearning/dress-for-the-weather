@@ -1,15 +1,13 @@
 from requests import get
 from datetime import datetime, timedelta
-import json
-KEY = '573895933a94d9f6287ad8a82a639a64'
-#weather = get('http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID='+key)
-today = datetime.now()
-with open('city.list.json') as f:
-    data = [json.loads(line) for line in f]
+from json import loads
 
+KEY = '573895933a94d9f6287ad8a82a639a64'
 
 def get_city_id():
-    city = input('Which is the closest city you are travelling to?' )
+    with open('city.list.json') as f:
+        data = [loads(line) for line in f]
+    city = input('Which is the closest city to the place you are travelling to?' )
     city_id = False
     for item in data:
         if item['name'] == city:
@@ -29,7 +27,8 @@ def get_weather_data(city_id):
     return weather_data.json()
 
 def get_arrival():
-    max_day = today + timedelta(days = 5)
+    today = datetime.now()
+    max_day = today + timedelta(days = 4)
     print('What day to you plan to arive?')
     print(today.strftime('%d'), '-', max_day.strftime('%d'))
     day = input()
@@ -95,3 +94,14 @@ def main():
     forecast = get_forecast(arrival, weather_data)
     weather = get_readable_forecast(forecast)
     get_clothes(weather)
+
+def get_city_id():
+    with open('city.list.json') as f:
+        data = [loads(line) for line in f]
+        city = input('Which is the closest city to the place you are travelling to? ')
+    city_id = False
+    for item in data:
+        if item['name'] == city:
+            city_id = item['_id']
+            print(item['country'])
+    return city_id
