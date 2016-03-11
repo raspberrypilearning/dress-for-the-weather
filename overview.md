@@ -1,1 +1,1 @@
-In this resource you will make a something do a something so that your something can do something and use something to control the something.
+In this resource you're going to write a program that will allow a user to type in a city they are travelling to and the date they will be arriving. The program will then use [open data](https://en.wikipedia.org/wiki/Open_data) form [OpenWeatherMap](http://openweathermap.org/api) to find out what the weather in that city at that time, and advise the user on what they should wear when they arrive.

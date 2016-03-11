@@ -1,7 +1,7 @@
-By creating a something with your Raspberry Pi you will learn:
+By creating the dress for the weather project you will learn,
 
-- How to set up a Raspberry Pi camera
-- How to use GPIO pins
-- How to create a circuit on a breadboard
-- Controlling GPIO pins with Python code
-- Controlling the camera module with Python code
+- How weather data can be stored in text files.
+- How to manipulate json files and objects
+- How to use Python to access open data APIs
+- How to manipulate dictionaries in Python
+
