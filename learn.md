@@ -1,7 +1,7 @@
-By creating the dress for the weather project you will learn,
+By creating the Dress for the Weather project you will learn:
 
-- How weather data can be stored in text files.
-- How to manipulate json files and objects
+- How weather data can be stored in text files
+- How to manipulate JSON files and objects
 - How to use Python to access open data APIs
 - How to manipulate dictionaries in Python
 
