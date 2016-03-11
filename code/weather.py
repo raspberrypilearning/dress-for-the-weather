@@ -1,6 +1,7 @@
 from requests import get
 from datetime import datetime, timedelta
 from json import loads
+from pprint import pprint
 
 KEY = '573895933a94d9f6287ad8a82a639a64'
 
@@ -29,7 +30,7 @@ def get_weather_data(city_id):
 def get_arrival():
     today = datetime.now()
     max_day = today + timedelta(days = 4)
-    print('What day to you plan to arive?')
+    print('What day of the month do you plan to arrive at your destination?')
     print(today.strftime('%d'), '-', max_day.strftime('%d'))
     day = input()
     print('What hour do you plan to arrive?')
@@ -49,7 +50,7 @@ def get_readable_forecast(forecast):
     weather = {}
     weather['cloudiness'] = forecast['clouds']['all']
     weather['temperature'] = float(forecast['main']['temp'])
-    weather['humdity'] = int(forecast['main']['humidity'])
+    weather['humidity'] = int(forecast['main']['humidity'])
     if '3h' in forecast['rain']:
         weather['rain'] = float(forecast['rain']['3h'])
     else:
@@ -71,7 +72,7 @@ def get_clothes(weather):
     elif weather['rain']/3 < 50:
         print("There'll be heavy rain, so you'll need and umbrella and a waterproof top")
     elif weather['rain']/3 > 50:
-        print("There'll be violent rain, so wear a lifejacket")
+        print("There'll be violent rain, so wear a life-jacket")
     if weather['temperature'] < 273:
         print("It's going to be freezing, so take a heavy coat")
     elif weather['temperature'] < 283:
@@ -81,9 +82,9 @@ def get_clothes(weather):
     elif weather['temperature'] < 303:
         print("Shorts and T-shirt weather :)")
     if weather['wind'] > 30:
-        print("There'll be wind, so a jacket might be usefull")
+        print("There'll be wind, so a jacket might be useful")
     elif weather['wind'] > 10:
-        print("There'll be a light breeze, so maybe long sleaves might be useful")
+        print("There'll be a light breeze, so maybe long sleeves might be useful")
     else:
         print("The air will be quite calm, so no need to worry about wind")
 
@@ -95,13 +96,3 @@ def main():
     weather = get_readable_forecast(forecast)
     get_clothes(weather)
 
-def get_city_id():
-    with open('city.list.json') as f:
-        data = [loads(line) for line in f]
-        city = input('Which is the closest city to the place you are travelling to? ')
-    city_id = False
-    for item in data:
-        if item['name'] == city:
-            city_id = item['_id']
-            print(item['country'])
-    return city_id
