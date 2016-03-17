@@ -386,5 +386,6 @@ To use the data you've just downloaded, you'll need to understand its nature.
 
 1. You should see that the two strings returned are dates and times that are three hours apart. That is what `list` contains: a list of predicted weather data for 5 days, each three hours apart. So to know what the user should wear, you're going to need the time and date they're getting to the city.
 
-Continue on to [Worksheet 2](worksheet2.md) to learn how.
+## What next?
 
+Continue on to [Worksheet 2](worksheet2.md) to learn how.
