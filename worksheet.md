@@ -146,7 +146,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-			city = input('Which is the closest city to the place you're travelling to?' )
+		city = input('Which is the closest city to the place you're travelling to?' )
 		city_id = False
 		for item in data:
 			if item['name'] == city:
@@ -174,7 +174,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-			city = input('Which is the closest city to the place you're travelling to? ')
+		city = input('Which is the closest city to the place you're travelling to? ')
 		city_id = False
 		for item in data:
 			if item['name'] == city:
