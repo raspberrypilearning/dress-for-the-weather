@@ -73,12 +73,12 @@ To get the city that the person is travelling to, you first need to understand t
 	cities = open('city.list.json').readlines()
 	```
 	
-    This has loaded all the lines of the file into a huge list called `f`.
+    This has loaded all the lines of the file into a huge list called `cities`.
 
 1. To have a look at some of the items in the list, you can type the following in the shell:
 
 	```python
-	f[0]
+	cities[0]
 	```
 
 	You should see something like this:
