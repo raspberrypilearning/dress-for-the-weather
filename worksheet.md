@@ -388,4 +388,4 @@ To use the data you've just downloaded, you'll need to understand its nature.
 
 ## What next?
 
-Continue on to [Worksheet 2](worksheet2.md) to learn how.
+Continue on to [Worksheet 2](worksheet2.md) to learn how to pick clothing for different weather scenarios.
