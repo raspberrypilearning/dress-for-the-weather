@@ -107,7 +107,7 @@ You should see the forecast for the correct city and the date/time displayed on 
 
 ## Making the forecast readable
 
-Even with *pretty print* the dictionary looks pretty messy. You could use the data structure as it is, but it would be fairly easy to make mistakes and introduce errors into your code. You're better off trying to create a new data structure to hold just the weather data you need.
+Even with pretty print the dictionary looks pretty messy. You could use the data structure as it is, but it would be fairly easy to make mistakes and introduce errors into your code. You're better off trying to create a new data structure to hold just the weather data you need.
 
 1. Define a new function that takes `forecast` as an argument and create an empty dictionary to hold the new data:
 
@@ -116,25 +116,25 @@ Even with *pretty print* the dictionary looks pretty messy. You could use the da
 		weather = {}
 	```
 
-1. The first item we want is the *cloudiness*. This is stored in `forecast['clouds']['all']`:
+1. The first item we want is the cloudiness. This is stored in `forecast['clouds']['all']`:
 
 	```python
 		weather['cloudiness'] = forecast['clouds']['all']
 	```
 
-1. Next, you want the temperature; it's stored in `forecast['main']['temp']`, but is a *string*. You need to *type cast* this to a *float*:
+1. Next, you want the temperature; it's stored in `forecast['main']['temp']`, but is a string. You need to type cast this to a float:
 
    ```python
 	   weather['temperature'] = float(forecast['main']['temp'])
    ```
 
-1. The humidity is the same, but needs *type casting* to an *integer* as it is always a whole number:
+1. The humidity is the same, but needs to be type cast to an integer as it is always a whole number:
 
 	```python
 		weather['humidity'] = int(forecast['main']['humidity'])
 	```
 
-1. Next is the rain. This one is a little awkward; if there's no rain that day, the dictionary will be empty, which will cause you problems. Using *conditional selection*, you can check if the dictionary contains the *key* `'3h'`. If it does, you can use the data. If not, you can set the rain to `0`.
+1. Next is the rain. This one is a little awkward; if there's no rain that day, the dictionary will be empty, which will cause you problems. Using conditional selection, you can check if the dictionary contains the key `'3h'`. If it does, you can use the data. If not, you can set the rain to `0`.
 
 	```python
 		if '3h' in forecast['rain']:
@@ -196,8 +196,8 @@ You should get something like this:
 - `description` is a short description of the weather.
 - `humidity` is the % humidity.
 - `rain` is the mm of rainfall in the last 3 hours
-- `temperature` is the temperature in **Kelvin**. This is the same scale as *Celsius* but with 273 added.
-- `wind` is the wind speed in *kilometres per hour*.
+- `temperature` is the temperature in **Kelvin**. This is the same scale as Celsius but with 273 added.
+- `wind` is the wind speed in kilometres per hour.
 
 ## Choosing what to wear
 
