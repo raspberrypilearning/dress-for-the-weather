@@ -136,7 +136,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-		city = input('Which is the closest city to the place you're travelling to?' )
+		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 	```
 
@@ -146,7 +146,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-		city = input('Which is the closest city to the place you're travelling to?' )
+		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
 			if item['name'] == city:
@@ -164,7 +164,7 @@ def get_city_id():
 
 	```python
 	>>> get_city_id()
-	Which is the closest city to the place you're travelling to? Peterborough
+	Which is the closest city to the place you are travelling to? Peterborough
 	5091002
 	```
 
@@ -174,7 +174,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-		city = input('Which is the closest city to the place you're travelling to? ')
+		city = input('Which is the closest city to the place you are travelling to? ')
 		city_id = False
 		for item in data:
 			if item['name'] == city:
@@ -185,7 +185,7 @@ def get_city_id():
 
 	```python
 	>>> get_city_id()
-	Which is the closest city to the place you're travelling to? Peterborough
+	Which is the closest city to the place you are travelling to? Peterborough
 	GB
 	CA
 	AU
@@ -200,7 +200,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-		city = input('Which is the closest city to the place you're travelling to?' )
+		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
 			if item['name'] == city:
@@ -217,7 +217,7 @@ def get_city_id():
 	def get_city_id():
 		with open('city.list.json') as f:
 			data = [loads(line) for line in f]
-		city = input('Which is the closest city to the place you're travelling to?' )
+		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
 			if item['name'] == city:
@@ -261,7 +261,7 @@ This might look a little confusing, but with Python you can easily examine the d
 	def get_weather_data(city_id):
 	```
 
-1. Then you can use string formatting to compose the *URL*:
+1. Then you can use string formatting to compose the URL:
 
 	```python
 	def get_weather_data(city_id):
@@ -270,7 +270,7 @@ This might look a little confusing, but with Python you can easily examine the d
 
     Here the curly brackets `{}` within the URL are replaced with whatever is in the brackets after `.format`.
 
-1. The data that your program downloads is just a long string. You can convert it to *JSON* easily enough, though, and return it:
+1. The data that your program downloads is just a long string. You can convert it to JSON easily enough, though, and return it:
 
 ```python
 def get_weather_data(city_id):
@@ -341,7 +341,7 @@ To use the data you've just downloaded, you'll need to understand its nature.
 	pprint(weather['list'])
 	```
 
-1. That's still pretty big, so have a look at the *zeroth* item in the list:
+1. That's still pretty big, so have a look at the zero-th item in the list:
 
 	```python
 	pprint(weather['list'][0])
@@ -370,7 +370,7 @@ To use the data you've just downloaded, you'll need to understand its nature.
 	 'wind': {'deg': 145.004, 'speed': 2.47}}
 	 ```
 
-    It will be different for you, as you're accessing the weather forecast at a different time.
+    It will be different for you, as you are accessing the weather forecast at a different time.
 
 1. What you have here is a dictionary containing weather data. This dictionary has a few keys in it, but for now the most important one is `dt_txt`. You can look at this by typing the following:
 
