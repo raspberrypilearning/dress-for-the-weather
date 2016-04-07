@@ -61,11 +61,11 @@ mkdir dress-for-the-weather
 gunzip city.list.json.gz
 ```
 
-1. If you list the directory contents again, you should see a new file called `city.list.json`. **Don't try and open the file**; it's *really* big, and could crash your computer.
+1. If you list the directory contents again, you should see a new file called `city.list.json`. **Don't try and open the file**; it's really big, and could crash your computer.
 
 ## Understanding JSON
 
-To get the city that the person is travelling to, you first need to understand the contents of the file you have just downloaded. You can explore the file using the *shell*.
+To get the city that the person is travelling to, you first need to understand the contents of the file you have just downloaded. You can explore the file using the shell.
 
 1. Save and run your `weather.py` file (`ctrl+s` and then `F5` in IDLE). In the shell, type the following command:
 
@@ -90,7 +90,7 @@ To get the city that the person is travelling to, you first need to understand t
 
     This is the city [Hurzuf in Ukraine](https://www.google.co.uk/maps/place/Hurzuf/@44.5472927,34.2739755,14z/data=!3m1!4b1!4m2!3m1!1s0x4094ca9c3582ba57:0xe2355b74466a46cc), and you can see its `id` is 707860.
 
-1. What you're looking at is known as a single *JSON object*. *JSON objects* look very similar to dictionaries in Python. In fact, you can easily convert a *JSON object* to a dictionary, using the `loads` method you have imported from the `json` library. Try this in the shell:
+1. What you're looking at is known as a single JSON object. JSON objects look very similar to dictionaries in Python. In fact, you can easily convert a JSON object to a dictionary, using the `loads` method you have imported from the `json` library. Try this in the shell:
 
 	```python
 	city = loads(cities[56325])
@@ -116,7 +116,7 @@ To get the city that the person is travelling to, you first need to understand t
 
 ## Getting the city ID
 
-1. Now that you understand the nature of the *JSON* file, you can use it to find the `id` of any city in there. You can write a new function to do this, so switch back over to your `weather.py` file and add the following:
+1. Now that you understand the nature of the JSON file, you can use it to find the `id` of any city in there. You can write a new function to do this, so switch back over to your `weather.py` file and add the following:
 
 ```python
 def get_city_id():
@@ -140,7 +140,7 @@ def get_city_id():
 		city_id = False
 	```
 
-1. Now your program needs to *iterate* over every dictionary in that list, and see if the `city` the user typed in is there:
+1. Now your program needs to iterate over every dictionary in that list, and see if the `city` the user typed in is there:
 
 	```python
 	def get_city_id():
@@ -160,7 +160,7 @@ def get_city_id():
 	get_city_id()
 	```
 
-1. Do you notice anything strange when you test the code with the city *Peterborough*?
+1. Do you notice anything strange when you test the code with the city Peterborough?
 
 	```python
 	>>> get_city_id()
