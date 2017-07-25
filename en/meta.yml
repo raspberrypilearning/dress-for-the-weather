@@ -1,0 +1,36 @@
+---
+title: Dress for the Weather
+hero_image: images/banner.png
+description: A resource to use the OpenWeatherMap API
+original_url: https://raspberrypi.org/learning/dress-for-the-weather
+theme: red
+duration: 2
+listed: false
+ingredient: false
+copyedit: true
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: rpi, physical computing, python
+site_areas: ''
+steps:
+- title: Introduction
+- title: What you will need
+- title: Dress for the weather
+- title: Getting it all ready
+- title: Getting a city list
+- title: Understanding JSON
+- title: Getting the city ID
+- title: Getting a 5-day forecast in your browser
+- title: Getting a 5-day forecast with Python
+- title: Looking at the data
+- title: What next?
+- title: Dress for the weather
+- title: Getting the arrival date and time
+- title: Retrieving the forecast for the required date and time
+- title: Testing so far
+- title: Making the forecast readable
+- title: Testing and understanding the data
+- title: Choosing what to wear
+- title: Finishing off
+- title: What next?
+
