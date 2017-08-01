@@ -1,4 +1,4 @@
-## What next?
+## Dress for the weather
 
-Continue on to [Worksheet 2](worksheet2.md) to learn how to pick clothing for different weather scenarios.
+In this continuation from [the previous worksheet](worksheet.md), you will learn how to customise the data from [OpenWeatherMap](http://openweathermap.org/api) to better suit your user's needs, and output what the user needs to wear.
 

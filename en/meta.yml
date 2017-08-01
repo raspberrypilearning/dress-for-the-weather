@@ -23,7 +23,6 @@ steps:
 - title: Getting a 5-day forecast in your browser
 - title: Getting a 5-day forecast with Python
 - title: Looking at the data
-- title: What next?
 - title: Dress for the weather
 - title: Getting the arrival date and time
 - title: Retrieving the forecast for the required date and time

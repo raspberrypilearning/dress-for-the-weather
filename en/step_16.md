@@ -1,63 +1,31 @@
-## Making the forecast readable
+## Testing and understanding the data
 
-Even with pretty print the dictionary looks pretty messy. You could use the data structure as it is, but it would be fairly easy to make mistakes and introduce errors into your code. You're better off trying to create a new data structure to hold just the weather data you need.
+Save and run the code again, then type the following into the shell:
 
-- Define a new function that takes `forecast` as an argument and create an empty dictionary to hold the new data:
+```python
+city_id = get_city_id()
+weather_data = get_weather_data(city_id)
+arrival = get_arrival()
+forecast = get_forecast(arrival, weather_data)
+weather = get_readable_forecast(forecast)
+pprint(weather)
+```
 
-	```python
-	def get_readable_forecast(forecast):
-		weather = {}
-	```
+You should get something like this:
 
-- The first item we want is the cloudiness. This is stored in `forecast['clouds']['all']`:
+```python
+{'cloudiness': 36,
+ 'description': 'scattered clouds',
+ 'humidity': 97,
+ 'rain': 0.0,
+ 'temperature': 283.99,
+ 'wind': 2.76}
+```
 
-	```python
-		weather['cloudiness'] = forecast['clouds']['all']
-	```
-
-- Next, you want the temperature; it's stored in `forecast['main']['temp']`, but is a string. You need to type cast this to a float:
-
-   ```python
-	   weather['temperature'] = float(forecast['main']['temp'])
-   ```
-
-- The humidity is the same, but needs to be type cast to an integer as it is always a whole number:
-
-	```python
-		weather['humidity'] = int(forecast['main']['humidity'])
-	```
-
-- Next is the rain. This one is a little awkward; if there's no rain that day, the dictionary will be empty, which will cause you problems. Using conditional selection, you can check if the dictionary contains the key `'3h'`. If it does, you can use the data. If not, you can set the rain to `0`.
-
-	```python
-		if '3h' in forecast['rain']:
-			weather['rain'] = float(forecast['rain']['3h'])
-		else:
-			weather['rain'] = 0.0
-	```
-
-- Finish off by adding in the description and the wind speed:
-
-	```python
-		weather['description'] = forecast['weather'][0]['description']
-		weather['wind'] = float(forecast['wind']['speed'])
-	```
-
-- Then return the newly created `weather` dictionary. The whole function should look like this:
-
-	```python
-	def get_readable_forecast(forecast):
-		weather = {}
-		weather['cloudiness'] = forecast['clouds']['all']
-		weather['temperature'] = float(forecast['main']['temp'])
-		weather['humidity'] = int(forecast['main']['humidity'])
-		if '3h' in forecast['rain']:
-			weather['rain'] = float(forecast['rain']['3h'])
-		else:
-			weather['rain'] = 0.0
-		weather['description'] = forecast['weather'][0]['description']
-		weather['wind'] = float(forecast['wind']['speed'])
-		return weather
-
-	```
+- `cloudiness` is the % cloud cover.
+- `description` is a short description of the weather.
+- `humidity` is the % humidity.
+- `rain` is the mm of rainfall in the last 3 hours
+- `temperature` is the temperature in **Kelvin**. This is the same scale as Celsius but with 273 added.
+- `wind` is the wind speed in kilometres per hour.
 

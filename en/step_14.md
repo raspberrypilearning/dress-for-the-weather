@@ -1,20 +1,14 @@
-## Retrieving the forecast for the required date and time
+## Testing so far
 
-Now that you have the date and time of arrival, you can query the dictionary for the correct forecast.
+To test your code so far, save and run your code, then type the following lines into the shell and answer the questions:
 
-- Start by defining a new function that takes the `weather_data` and the `arrival` as arguments:
+```python
+city_id = get_city_id()
+weather_data = get_weather_data(city_id)
+arrival = get_arrival()
+forecast = get_forecast(arrival, weather_data)
+pprint(forecast)
+```
 
-	```python
-	def get_forecast(arrival, weather_data):
-	```
-
-- Now you can iterate over the `weather_data['list]` to find the entry that has the correct arrival time:
-
-	```python
-	def get_forecast(arrival, weather_data):
-		for forecast in weather_data['list']:
-			if forecast['dt_txt'] == arrival:
-				return forecast
-
-	```
+You should see the forecast for the correct city and the date/time displayed on your screen.
 
