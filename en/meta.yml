@@ -3,7 +3,7 @@ title: Dress for the Weather
 hero_image: images/banner.png
 description: A resource to use the OpenWeatherMap API
 original_url: https://raspberrypi.org/learning/dress-for-the-weather
-theme: red
+theme: violet
 duration: 2
 listed: true
 ingredient: false
