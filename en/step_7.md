@@ -107,7 +107,7 @@ def get_city_id():
 			if item['name'] == city:
 				answer = input('Is this in ' + item['country'])
 				if answer == 'y':
-					city_id = item['_id']
+					city_id = item['id']
 					break
 
 		if not city_id:
