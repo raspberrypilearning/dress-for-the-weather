@@ -3,18 +3,19 @@ from datetime import datetime, timedelta
 from json import loads
 from pprint import pprint
 
-KEY = '573895933a94d9f6287ad8a82a639a64'
+KEY = 'long_string_here'
 
 def get_city_id():
     with open('city.list.json') as f:
-        data = [loads(line) for line in f]
+        data = loads(f.read())
+#        data = [loads(line) for line in f]
     city = input('Which is the closest city to the place you are travelling to?' )
     city_id = False
     for item in data:
         if item['name'] == city:
             answer = input('Is this this in ' + item['country'])
             if answer == 'y':
-                city_id = item['_id']
+                city_id = item['id']
                 break
 
     if not city_id:
@@ -95,4 +96,3 @@ def main():
     forecast = get_forecast(arrival, weather_data)
     weather = get_readable_forecast(forecast)
     get_clothes(weather)
-
