@@ -11,7 +11,7 @@ def get_city_id():
 ```python
 def get_city_id():
     with open('city.list.json') as f:
-        data = [loads(line) for line in f]
+        data = loads(f.read())
 ```
 
 - Next, you need to ask the user where they're travelling to. Just in case their city is not in the list, we'll set a variable called `city_id` to `False` as well:
@@ -19,7 +19,7 @@ def get_city_id():
 	```python
 	def get_city_id():
 		with open('city.list.json') as f:
-			data = [loads(line) for line in f]
+		    data = loads(f.read())
 		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 	```
@@ -29,7 +29,7 @@ def get_city_id():
 	```python
 	def get_city_id():
 		with open('city.list.json') as f:
-			data = [loads(line) for line in f]
+		    data = loads(f.read())
 		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
@@ -57,7 +57,7 @@ def get_city_id():
 	```python
 	def get_city_id():
 		with open('city.list.json') as f:
-			data = [loads(line) for line in f]
+		    data = loads(f.read())
 		city = input('Which is the closest city to the place you are travelling to? ')
 		city_id = False
 		for item in data:
@@ -83,7 +83,7 @@ def get_city_id():
 	```python
 	def get_city_id():
 		with open('city.list.json') as f:
-			data = [loads(line) for line in f]
+		    data = loads(f.read())
 		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
@@ -100,7 +100,7 @@ def get_city_id():
 	```python
 	def get_city_id():
 		with open('city.list.json') as f:
-			data = [loads(line) for line in f]
+		    data = loads(f.read())
 		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
