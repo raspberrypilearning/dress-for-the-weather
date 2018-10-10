@@ -16,13 +16,13 @@ def get_city_id():
 
 - Next, you need to ask the user where they're travelling to. Just in case their city is not in the list, we'll set a variable called `city_id` to `False` as well:
 
-	```python
-	def get_city_id():
-		with open('city.list.json') as f:
-		    data = loads(f.read())
-		city = input('Which is the closest city to the place you are travelling to?' )
-		city_id = False
-	```
+```python
+def get_city_id():
+    with open('city.list.json') as f:
+        data = loads(f.read())
+    city = input('Which is the closest city to the place you are travelling to?' )
+    city_id = False
+```
 
 - Now your program needs to iterate over every dictionary in that list, and see if the `city` the user typed in is there:
 
@@ -33,8 +33,8 @@ def get_city_id():
 		city = input('Which is the closest city to the place you are travelling to?' )
 		city_id = False
 		for item in data:
-			if item['name'] == city:
-				city_id = item['_id']
+		    if item['name'] == city:
+		        city_id = item['id']
 		return city_id
 	```
 
@@ -62,7 +62,7 @@ def get_city_id():
 		city_id = False
 		for item in data:
 			if item['name'] == city:
-				city_id = item['_id']
+				city_id = item['id']
 				print(item['country'])
 		return city_id
 	```
@@ -90,7 +90,7 @@ def get_city_id():
 			if item['name'] == city:
 				answer = input('Is this in ' + item['country'])
 				if answer == 'y':
-					city_id = item['_id']
+					city_id = item['id']
 					break
 		return city_id
 	```
