@@ -6,9 +6,9 @@ The first thing you'll need to do is to get access to the weather forecast data.
 
 ![sign up screen](images/screen1.png)
 
-- Once signed in, you can see your API key on [the dashboard](http://home.openweathermap.org/):
+-  After you have registered, you will receive an email with your **secret** API key.
 
-![dashboard](images/screen2.png)
+	![img](images/screen2.png)
 
 - You'll need a place to save your files in for this project. In your home directory, create a new directory called `dress-for-the-weather`. You can do this with the **File Explorer**, or by opening a **terminal** window and typing:
 
