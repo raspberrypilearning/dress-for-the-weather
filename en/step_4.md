@@ -15,6 +15,7 @@ highlight_lines:
 ---
 location = input("Which city or town are you visiting? ")
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -31,6 +32,7 @@ highlight_lines: 8
 location = input("Which city or town are you visiting? ")
 forecast = owm.daily_forecast(location + ',' + COUNTRY)
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -75,6 +77,7 @@ while valid_location == #What should this be:
 As `valid_location` starts off as `False` the while loop should only end when it becomes True.
 --- /hint --- --- hint ---
 Here's how the loop should be constructed
+
 --- code ---
 ---
 language: python
@@ -92,8 +95,10 @@ while valid_location == False:
     except:
         #Print out a message to the user here to tell them to try again
 --- /code ---
+
 --- /hint --- --- hint ---
 Here's the full code
+
 --- code ---
 ---
 language: python
@@ -111,5 +116,6 @@ while valid_location == False:
     except:
         print(location, 'is not a valid place.')
 --- /code ---
+
 --- /hint --- --- /hints ---
 --- /task ---
