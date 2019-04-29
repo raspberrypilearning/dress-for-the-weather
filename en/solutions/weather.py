@@ -6,7 +6,7 @@ from pprint import pprint
 KEY = '573895933a94d9f6287ad8a82a639a64'
 
 def get_city_id():
-    with open('city.list.json') as f:
+    with open('/home/mjs/dress-for-the-weather/code/city.list.json') as f:
         data = [loads(line) for line in f]
     city = input('Which is the closest city to the place you are travelling to?' )
     city_id = False
