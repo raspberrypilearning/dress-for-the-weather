@@ -8,13 +8,14 @@ Start by getting the description of the weather.
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: 
 line_number_start: 25
 highlight_lines: 25
 ---
 description = weather.get_detailed_status()
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -30,10 +31,11 @@ You should see a brief description of the weather.
 
 --- task ---
 Fetch the cloud cover, temperature, wind and rain, in the same way
+
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: 
 line_number_start: 25
 highlight_lines: 26,27,28,29
@@ -44,6 +46,7 @@ temperature = weather.get_temperature()
 wind = weather.get_wind()
 rain = weather.get_rain()
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -65,10 +68,11 @@ You will notice that while `clouds` is just an integer showing percentage cloud 
 
 --- task ---
 You can fetch the specific data you need, by using the keys from the dictionaries.
+
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: 
 line_number_start: 25
 highlight_lines: 26,27,28,29
@@ -81,6 +85,7 @@ rain = weather.get_rain()['all']
 
 Run this code and see what happens, with different days and places.
 --- /code ---
+
 --- /task ---
 
 Did you get an error when you ran the code?
@@ -93,10 +98,11 @@ THis will happen if there is no rain forecast, so you can use another `try` and 
 
 --- task ---
 Change your code so the `KeyError` can be caught.
+
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
 line_number_start: 25
 highlight_lines: 29,30,31,32
@@ -110,4 +116,5 @@ try:
 except KeyError:
     rain = 0
 --- /code ---
+
 --- /task ---

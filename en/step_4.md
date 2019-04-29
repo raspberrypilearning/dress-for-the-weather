@@ -8,7 +8,7 @@ Use an `input` function to find out which location is being visited.
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
 line_number_start: 7 
 highlight_lines: 
@@ -24,7 +24,7 @@ Now what the location can be found, you can fetch the daily forecast for that ar
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
 line_number_start: 7 
 highlight_lines: 8
@@ -58,7 +58,7 @@ Look at the code below and try to edit it, so that it will keep asking for a tow
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
 line_number_start: 7 
 highlight_lines: 
@@ -81,7 +81,7 @@ Here's how the loop should be constructed
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
 line_number_start: 7 
 highlight_lines: 8,12
@@ -102,7 +102,7 @@ Here's the full code
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
 line_number_start: 7 
 highlight_lines: 14

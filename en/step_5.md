@@ -8,45 +8,50 @@ Add this line of code to the bottom of your file, to ask for the number of day a
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
-line_number_start:17 
-highlight_lines:17
+line_number_start: 17 
+highlight_lines: 17
 ---
 arrive = int(input("How many days are there (0 - 5) before you arrive? "))
 --- /code ---
+
 --- /task ---
 
 --- task ---
 You can then calculate the date, using the `datetime` module.
+
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
-line_number_start:17 
-highlight_lines:18
+line_number_start: 17 
+highlight_lines: 18
 ---
 arrive = int(input("How many days are there (0 - 5) before you arrive? "))
 forecast_date = datetime.now() + timedelta(days = arrive)
 --- /code ---
+
 --- /task ---
 
 --- task ---
 Now use this date to get the weather.
+
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
-line_number_start:17 
-highlight_lines:18
+line_number_start: 17 
+highlight_lines: 18
 ---
 arrive = int(input("How many days are there (0 - 5) before you arrive? "))
 forecast_date = datetime.now() + timedelta(days = arrive)
 
 weather = forecast.get_weather_at(forecast_date)
 --- /code ---
+
 --- /task ---
 
 --- task ---
@@ -68,10 +73,10 @@ Can you add in more error checking, to make sure a valid number is provided? The
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
-line_number_start:17 
-highlight_lines:
+line_number_start: 17 
+highlight_lines: 
 ---
 arrive = #What should this number be, to make sure the loop is entered?
 while days not in range(#What number should go in here):
@@ -80,18 +85,20 @@ while days not in range(#What number should go in here):
 
 weather = forecast.get_weather_at(forecast_date)
 --- /code ---
+
 --- hints --- --- hint ---
 Set the initial value of `arrive` to a number greater than 5 or less than 0
 --- /hint --- --- hint ---
 `range(6)` would contain the numbers `1`, `2`, `3`, `4` and `5`.
 --- /hint --- --- hint ---
 Here's what the code might look like:
+
 --- code ---
 ---
 language: python
-filename: 
+filename: weather.py
 line_numbers: true
-line_number_start:17 
+line_number_start: 17 
 highlight_lines:
 ---
 arrive = 100
@@ -101,6 +108,7 @@ while days not in range(6):
 
 weather = forecast.get_weather_at(forecast_date)
 --- /code ---
+
 --- /hint --- --- /hints ---
 
 --- /task ---
