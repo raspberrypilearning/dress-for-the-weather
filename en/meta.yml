@@ -19,5 +19,7 @@ last_tested: 2017-01-01
 steps: 
 - title: Introduction
 - title: Getting it all ready
-- title: Getting the date and location
-- title: Getting the city or town
+- title: Accessing the API
+- title: Getting the location
+- title: Getting the date
+- title: Fetching the weather

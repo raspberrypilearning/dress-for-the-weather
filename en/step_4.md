@@ -1,4 +1,4 @@
-## Getting the city or town
+## Getting the location
 
 To get a weather forecast you need to know the town or city that is going to be visited.
 

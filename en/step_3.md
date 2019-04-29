@@ -1,4 +1,4 @@
-## Getting the date and location
+## Accessing the API
 
 To begin with you will need to import a few modules into your program and then set your api keyt that you can copy and paste from the Open Weather Map website.
 
