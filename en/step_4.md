@@ -10,7 +10,7 @@ Use an `input` function to find out which location is being visited.
 language: python
 filename: 
 line_numbers: true
-line_number_start:7 
+line_number_start: 7 
 highlight_lines: 
 ---
 location = input("Which city or town are you visiting? ")
@@ -25,7 +25,7 @@ Now what the location can be found, you can fetch the daily forecast for that ar
 language: python
 filename: 
 line_numbers: true
-line_number_start:7 
+line_number_start: 7 
 highlight_lines: 8
 ---
 location = input("Which city or town are you visiting? ")
@@ -58,7 +58,7 @@ Look at the code below and try to edit it, so that it will keep asking for a tow
 language: python
 filename: 
 line_numbers: true
-line_number_start:7 
+line_number_start: 7 
 highlight_lines: 
 ---
 valid_location = False
@@ -80,7 +80,7 @@ Here's how the loop should be constructed
 language: python
 filename: 
 line_numbers: true
-line_number_start:7 
+line_number_start: 7 
 highlight_lines: 8,12
 ---
 valid_location = False
@@ -99,7 +99,7 @@ Here's the full code
 language: python
 filename: 
 line_numbers: true
-line_number_start:7 
+line_number_start: 7 
 highlight_lines: 14
 ---
 valid_location = False
