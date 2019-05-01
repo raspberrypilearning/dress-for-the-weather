@@ -82,10 +82,9 @@ clouds = weather.get_clouds()
 temperature = weather.get_temperature()['day']
 wind = weather.get_wind()['speed']
 rain = weather.get_rain()['all']
-
-Run this code and see what happens, with different days and places.
 --- /code ---
 
+Run this code and see what happens, with different days and places.
 --- /task ---
 
 Did you get an error when you ran the code?

@@ -30,10 +30,18 @@ line_number_start: 17
 highlight_lines: 18
 ---
 arrive = int(input("How many days are there (0 - 5) before you arrive? "))
-forecast_date = datetime.now() + timedelta(days = arrive)
+forecast_date = datetime.now() + timedelta(days = arrive, hours = 3)
 --- /code ---
 
 --- /task ---
+
+--- collapse ---
+---
+title: Code not working
+---
+One common error that can occur here is that because Open Weather Maps does three hourly forecasts, it can sometimes reject the requested time. That is the reason for the hours in `timedelta(days = arrive, hours = 3)`. If it still doesn't work, try increasing the number of hours ahead you are looking.
+--- /collapse ---
+
 
 --- task ---
 Now use this date to get the weather.
@@ -47,7 +55,7 @@ line_number_start: 17
 highlight_lines: 18
 ---
 arrive = int(input("How many days are there (0 - 5) before you arrive? "))
-forecast_date = datetime.now() + timedelta(days = arrive)
+forecast_date = datetime.now() + timedelta(days = arrive, hours = 3)
 
 weather = forecast.get_weather_at(forecast_date)
 --- /code ---
@@ -81,7 +89,7 @@ highlight_lines:
 arrive = #What should this number be, to make sure the loop is entered?
 while days not in range(#What number should go in here):
     arrive = int(input("How many days are there (0 - 5) before you arrive? "))
-    forecast_date = datetime.now() + timedelta(days = arrive)
+    forecast_date = datetime.now() + timedelta(days = arrive, hours = 3)
 
 weather = forecast.get_weather_at(forecast_date)
 --- /code ---
@@ -104,7 +112,7 @@ highlight_lines:
 arrive = 100
 while days not in range(6):
     arrive = int(input("How many days are there (0 - 5) before you arrive? "))
-    forecast_date = datetime.now() + timedelta(days = arrive)
+    forecast_date = datetime.now() + timedelta(days = arrive, hours = 3)
 
 weather = forecast.get_weather_at(forecast_date)
 --- /code ---
