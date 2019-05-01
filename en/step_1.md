@@ -5,11 +5,11 @@ In this resource you're going to write a program that will allow a user to type 
 ### What you will make
 
 --- no-print ---
-![Complete project](images/finished.gif)
+![Complete project](images/complete.gif)
 --- /no-print ---
 
 --- print-only ---
-![Complete project](images/finished.png)
+![Complete project](images/complete.png)
 --- /print-only ---
 
 --- collapse ---
