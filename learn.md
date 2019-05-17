@@ -1,4 +1,4 @@
-By creating the Dress for the weather project you will learn:
+By creating the *Dress for the weather* project you will learn:
 
 - How weather data can be stored in text files
 - How to manipulate JSON files and objects
