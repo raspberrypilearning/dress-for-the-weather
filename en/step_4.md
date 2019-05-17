@@ -74,7 +74,7 @@ while valid_location == #What should this be:
 --- /code ---
 
 --- hints --- --- hint ---
-As `valid_location` starts off as `False`, the `while` loop should end only when it becomes True.
+As `valid_location` starts off as `False`, the `while` loop should end only when it becomes `True`.
 --- /hint --- --- hint ---
 Here's how the loop should be constructed:
 
@@ -110,7 +110,7 @@ highlight_lines: 14
 valid_location = False
 while valid_location == False:
     try:
-        location = input("Which city or town are you visiting?")
+        location = input("Which city or town are you visiting? ")
         forecast = owm.daily_forecast(location + ',' + COUNTRY)
         valid_location = True
     except:
