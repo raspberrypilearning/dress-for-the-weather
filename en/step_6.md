@@ -19,7 +19,7 @@ description = weather.get_detailed_status()
 --- /task ---
 
 --- task ---
-Run your code an then type `description` into the REPL.
+Run your code and then type `description` into the REPL.
 
 ```python
 >>> description
@@ -30,7 +30,7 @@ You should see a brief description of the weather.
 --- /task ---
 
 --- task ---
-Fetch the cloud cover, temperature, wind and rain, in the same way
+Fetch the cloud cover, temperature, wind, and rain in the same way.
 
 --- code ---
 ---
@@ -50,7 +50,7 @@ rain = weather.get_rain()
 --- /task ---
 
 --- task ---
-Have a look at this data in the REPL
+Have a look at this data in the REPL.
 ```python
 >>> clouds
 85
@@ -64,10 +64,10 @@ Have a look at this data in the REPL
 ```
 --- /task ---
 
-You will notice that while `clouds` is just an integer showing percentage cloud cover, `temperature`, `wind` and `rain` are all dictionaries.
+You will notice that while `clouds` is just an integer showing percentage cloud cover, `temperature`, `wind`, and `rain` are all dictionaries.
 
 --- task ---
-You can fetch the specific data you need, by using the keys from the dictionaries.
+You can fetch the specific data you need by using the keys from the dictionaries.
 
 --- code ---
 ---
@@ -84,7 +84,7 @@ wind = weather.get_wind()['speed']
 rain = weather.get_rain()['all']
 --- /code ---
 
-Run this code and see what happens, with different days and places.
+Run this code and see what happens with different days and places.
 --- /task ---
 
 Did you get an error when you ran the code?
@@ -93,7 +93,7 @@ Did you get an error when you ran the code?
 KeyError: 'all'
 ```
 
-THis will happen if there is no rain forecast, so you can use another `try` and `except` error check to catch the error. This time, you can specify exactly what error you are expecting to catch.
+This will happen if there is no rain forecast, so you can use another `try` and `except` error check to catch the error. This time, you can specify exactly which error you are expecting to catch.
 
 --- task ---
 Change your code so the `KeyError` can be caught.
