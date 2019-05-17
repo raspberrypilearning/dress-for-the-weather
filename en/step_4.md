@@ -29,7 +29,7 @@ line_numbers: true
 line_number_start: 7 
 highlight_lines: 8
 ---
-location = input("Which city or town are you visiting?")
+location = input("Which city or town are you visiting? ")
 forecast = owm.daily_forecast(location + ',' + COUNTRY)
 --- /code ---
 
