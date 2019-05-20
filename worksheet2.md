@@ -19,7 +19,7 @@ The date and time from the JSON file is in a specific format, `YYYY-MM-DD HH:00:
 		today = datetime.now()
 	```
 
-3. To have the user choose a date, you need to give them a range of dates to choose from. As this is a five-day forecast, it will range from the date today up to the date in four days' time. To get the date in four days' time you can use the `timedelta` method:
+3. To have the user choose a date, you need to give them a range of dates to choose from. As this is a five-day forecast, it will range from the date today up to the date in four days' time. To get the date in four days' time, you can use the `timedelta` method:
 
 	```python
 		max_day = today + timedelta(days = 4)
