@@ -251,7 +251,7 @@ You should get back something that looks like this:
 
 ![browser data](images/screen3.png)
 
-This might look a little confusing, but with Python you can easily examine the data.
+This might look a little confusing, but with Python you can examine the data easily.
 
 ## Getting a five-day forecast with Python
 
