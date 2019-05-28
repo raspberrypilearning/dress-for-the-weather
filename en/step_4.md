@@ -1,35 +1,121 @@
-## Getting it all ready
+## Getting the location
 
-The first thing you'll need to do is to get access to the weather forecast data. We can get the data from a site called [OpenWeatherMap](http://openweathermap.org/api).
+To get a weather forecast you need to know the town or city that is going to be visited.
 
-- Navigate to [OpenWeatherMap](http://home.openweathermap.org/users/sign_up) to sign up for a free account:
+--- task ---
+Use an `input` function to find out which location is being visited.
 
-![sign up screen](images/screen1.png)
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: true
+line_number_start: 7 
+highlight_lines: 
+---
+location = input("Which city or town are you visiting? ")
+--- /code ---
 
--  After you have registered, you will receive an email with your **secret** API key.
+--- /task ---
 
-	![img](images/screen2.png)
+--- task ---
+Now that the location can be found, you can fetch the daily forecast for that area.
 
-- You'll need a place to save your files in for this project. In your home directory, create a new directory called `dress-for-the-weather`. You can do this with the **File Explorer**, or by opening a **terminal** window and typing:
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: true
+line_number_start: 7 
+highlight_lines: 8
+---
+location = input("Which city or town are you visiting? ")
+forecast = owm.daily_forecast(location + ',' + COUNTRY)
+--- /code ---
 
-```bash
-mkdir dress-for-the-weather
+--- /task ---
+
+--- task ---
+Run your code and type in the name of a town or city. Nothing should happen yet.
+
+Run it again, and this time use a town name that doesn't exist or is spelled incorrectly.
+
+You should see an error message that ends like this:
+
+```python
+pyowm.exceptions.api_response_error.NotFoundError: The searched item was not found.
+Reason: Unable to find the resource
 ```
+--- /task ---
 
-- Now, open up a new Python 3 file in your favourite editor; for instance, you can navigate to **Menu** > **Programming** > **Python3**. Create a new file (**File** > **New Window**) and save this as `weather.py` in the new directory.
+For the code to work, you will need to catch this kind of error. When an incorrect name is given, the program should ask for the name to be input again.
 
-- You're going to need a few modules to complete this project, so you can import them by writing the following lines of code at the top of your file:
+You can use `try` and `except` in Python to catch these types of error, and a `while` loop to keep asking for the location until a correct town or city name is provided.
 
-   ```python
-   from requests import get
-   from datetime import datetime, timedelta
-   from json import loads
-   from pprint import pprint
-   ```
+--- task ---
+Look at the code below and try to edit it so that it will keep asking for a town name until a correct one is provided. Use the hints below if you get stuck.
 
-- Next, get your API key for OpenWeatherMap and declare it as a variable in your program:
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: true
+line_number_start: 7 
+highlight_lines: 
+---
+valid_location = False
+while valid_location == #What should this be:
+    try:
+        location = input("Which city or town are you visiting? ")
+        forecast = owm.daily_forecast(location + ',' + COUNTRY)
+        valid_location = #What should it change to
+    except:
+        #Print out a message to the user here to tell them to try again
+--- /code ---
 
-	```python
-	KEY = 'paste your key in here'
-	```
-	
+--- hints --- --- hint ---
+As `valid_location` starts off as `False`, the `while` loop should end only when it becomes `True`.
+--- /hint --- --- hint ---
+Here's how the loop should be constructed:
+
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: true
+line_number_start: 7 
+highlight_lines: 8,12
+---
+valid_location = False
+while valid_location == False:
+    try:
+        location = input("Which city or town are you visiting? ")
+        forecast = owm.daily_forecast(location + ',' + COUNTRY)
+        valid_location = True
+    except:
+        #Print out a message to the user here to tell them to try again.
+--- /code ---
+
+--- /hint --- --- hint ---
+Here's the full code:
+
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: true
+line_number_start: 7 
+highlight_lines: 14
+---
+valid_location = False
+while valid_location == False:
+    try:
+        location = input("Which city or town are you visiting? ")
+        forecast = owm.daily_forecast(location + ',' + COUNTRY)
+        valid_location = True
+    except:
+        print(location, 'is not a valid place.')
+--- /code ---
+
+--- /hint --- --- /hints ---
+--- /task ---

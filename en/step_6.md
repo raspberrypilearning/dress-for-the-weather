@@ -1,28 +1,119 @@
-## Understanding JSON
+## Fetching the weather
 
-To get the city that the person is travelling to, you first need to understand the contents of the file you have just downloaded. You can explore the file using the shell.
+Now that you have the `weather` object, it can be used to get information such as the amount of rain and cloud cover.
 
-- Save and run your `weather.py` file (`ctrl+s` and then `F5` in IDLE). In the shell, type the following command:
+--- task ---
+Start by getting the description of the weather.
 
-	```python
-	cities = open('city.list.json').read()
-	```
-	
-    This has loaded all the lines of the file into a huge string called `cities`.
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: 
+line_number_start: 25
+highlight_lines: 25
+---
+description = weather.get_detailed_status()
+--- /code ---
 
-- To have a look at some of the items in the list, you can type the following in the shell:
+--- /task ---
 
-	```python
-	cities[0:130]
-	```
+--- task ---
+Run your code and then type `description` into the REPL.
 
-	You should see something like this:
+```python
+>>> description
+'moderate rain'
+```
 
-	```python
-	>>> cities[0:130]
-	'[\n  {\n    "id": 707860,\n    "name": "Hurzuf",\n    "country": "UA",\n    "coord": {\n      "lon": 34.283333,\n      "lat": 44.549999\n '
-	```
+You should see a brief description of the weather.
+--- /task ---
 
-    This is the city [Hurzuf in Ukraine](https://www.google.co.uk/maps/place/Hurzuf/@44.5472927,34.2739755,14z/data=!3m1!4b1!4m2!3m1!1s0x4094ca9c3582ba57:0xe2355b74466a46cc), and you can see its `id` is 707860.
+--- task ---
+Fetch the cloud cover, temperature, wind, and rain in the same way.
 
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: 
+line_number_start: 25
+highlight_lines: 26,27,28,29
+---
+description = weather.get_detailed_status()
+clouds = weather.get_clouds()
+temperature = weather.get_temperature()
+wind = weather.get_wind()
+rain = weather.get_rain()
+--- /code ---
 
+--- /task ---
+
+--- task ---
+Have a look at this data in the REPL.
+```python
+>>> clouds
+85
+>>> temperature
+{'day': 287.72, 'min': 280.4, 'max': 288.2, 'night': 280.4, 'eve': 284.76, 'morn': 281.22}
+>>> wind
+{'speed': 3.89, 'deg': 307}
+>>> rain
+{'all': 3.06}
+>>> 
+```
+--- /task ---
+
+You will notice that while `clouds` is just an integer showing percentage cloud cover, `temperature`, `wind`, and `rain` are all dictionaries.
+
+--- task ---
+You can fetch the specific data you need by using the keys from the dictionaries.
+
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: 
+line_number_start: 25
+highlight_lines: 26,27,28,29
+---
+description = weather.get_detailed_status()
+clouds = weather.get_clouds()
+temperature = weather.get_temperature()['day']
+wind = weather.get_wind()['speed']
+rain = weather.get_rain()['all']
+--- /code ---
+
+Run this code and see what happens with different days and places.
+--- /task ---
+
+Did you get an error when you ran the code?
+
+```python
+KeyError: 'all'
+```
+
+This will happen if there is no rain forecast, so you can use another `try` and `except` error check to catch the error. This time, you can specify exactly which error you are expecting to catch.
+
+--- task ---
+Change your code so the `KeyError` can be caught.
+
+--- code ---
+---
+language: python
+filename: weather.py
+line_numbers: true
+line_number_start: 25
+highlight_lines: 29,30,31,32
+---
+description = weather.get_detailed_status()
+clouds = weather.get_clouds()
+temperature = weather.get_temperature()['day']
+wind = weather.get_wind()['speed']
+try:
+    rain = weather.get_rain()['all']
+except KeyError:
+    rain = 0
+--- /code ---
+
+--- /task ---
