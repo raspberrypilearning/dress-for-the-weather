@@ -1,11 +1,11 @@
 ## Getting it all ready
 
-You're going to need a Python module called **pyowm**. The easiest way to get this is to use **pip**
+You're going to need a Python module called **pyowm**. The easiest way to get this is to use **pip**.
 
 [[[generic-python-installing-with-pip]]]
 
 --- task ---
-So open a terminal or command prompt and type either:
+Open a terminal or command prompt and type either:
 
 ```bash
 pip3 install pyowm
@@ -16,7 +16,7 @@ pip install pyowm
 ```
 --- /task ---
 
-Next you'll need to do is to get access to the weather forecast data. We can get the data from a site called [OpenWeatherMap](http://openweathermap.org/api).
+Next, you'll need to get access to the weather forecast data. We can get the data from a site called [OpenWeatherMap](http://openweathermap.org/api).
 
 --- task ---
 Navigate to [OpenWeatherMap](http://home.openweathermap.org/users/sign_up) to sign up for a free account:
@@ -32,7 +32,7 @@ After you have registered, you will can view your API keys on the site.
 ![img](images/api_keys.png)
 
 --- task ---
-Using **Mu** or another editor of your choice, create a new file and save it as `weather.py`
+Using **Mu** or another editor of your choice, create a new file and save it as `weather.py`.
 
 ![mu](images/mu.png)
 --- /task ---

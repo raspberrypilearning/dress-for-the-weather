@@ -19,7 +19,7 @@ location = input("Which city or town are you visiting? ")
 --- /task ---
 
 --- task ---
-Now what the location can be found, you can fetch the daily forecast for that area.
+Now that the location can be found, you can fetch the daily forecast for that area.
 
 --- code ---
 ---
@@ -38,7 +38,7 @@ forecast = owm.daily_forecast(location + ',' + COUNTRY)
 --- task ---
 Run your code and type in the name of a town or city. Nothing should happen yet.
 
-Run it again, and this time use a town name that doesn't exist or is spelled incorrectly
+Run it again, and this time use a town name that doesn't exist or is spelled incorrectly.
 
 You should see an error message that ends like this:
 
@@ -48,12 +48,12 @@ Reason: Unable to find the resource
 ```
 --- /task ---
 
-For the code to work, you will need to catch this kind of error. When an incorrect name is given, the program should ask for the name to be input in again.
+For the code to work, you will need to catch this kind of error. When an incorrect name is given, the program should ask for the name to be input again.
 
-You can use `try` and `except` in Python to catch these types of errors, and a `while` loop to keep asking for the location until a correct town or city name is provided.
+You can use `try` and `except` in Python to catch these types of error, and a `while` loop to keep asking for the location until a correct town or city name is provided.
 
 --- task ---
-Look at the code below and try to edit it, so that it will keep asking for a town name until a correct one is provided. Use the hints below if you get stuck.
+Look at the code below and try to edit it so that it will keep asking for a town name until a correct one is provided. Use the hints below if you get stuck.
 
 --- code ---
 ---
@@ -74,9 +74,9 @@ while valid_location == #What should this be:
 --- /code ---
 
 --- hints --- --- hint ---
-As `valid_location` starts off as `False` the while loop should only end when it becomes True.
+As `valid_location` starts off as `False`, the `while` loop should end only when it becomes `True`.
 --- /hint --- --- hint ---
-Here's how the loop should be constructed
+Here's how the loop should be constructed:
 
 --- code ---
 ---
@@ -93,11 +93,11 @@ while valid_location == False:
         forecast = owm.daily_forecast(location + ',' + COUNTRY)
         valid_location = True
     except:
-        #Print out a message to the user here to tell them to try again
+        #Print out a message to the user here to tell them to try again.
 --- /code ---
 
 --- /hint --- --- hint ---
-Here's the full code
+Here's the full code:
 
 --- code ---
 ---

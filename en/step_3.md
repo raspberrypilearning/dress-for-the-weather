@@ -1,9 +1,9 @@
 ## Accessing the API
 
-To begin with you will need to import a few modules into your program and then set your api keyt that you can copy and paste from the Open Weather Map website.
+To begin with you will need to import a few modules into your program and then set your API key that you can copy and paste from the Open Weather Map website.
 
 --- task ---
-Import the pyowm and datetime modules into your program
+Import the pyowm and datetime modules into your program.
 
 --- code ---
 ---
@@ -19,7 +19,7 @@ from datetime import datetime, timedelta
 --- /task ---
 
 --- task ---
-Now set your api key and the country you live in
+Now set your API key and the country you live in.
 
 --- code ---
 ---
@@ -38,13 +38,13 @@ COUNTRY = 'UK'
 --- /task ---
 
 --- task ---
-Test that your script is working by running the code. In the interpreter type the following line of code to test the connection to the Open Weather Maps API.
+Test that your script is working by running the code. In the interpreter, type the following line of code to test the connection to the Open Weather Maps API.
 
 ```python
 owm.daily_forecast('london,uk')
 ```
 
-If your code is working then you should see the following response
+If your code is working then you should see the following response:
 ```python
 <pyowm.weatherapi25.forecaster.Forecaster>
 ```

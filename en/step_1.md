@@ -18,7 +18,7 @@ title: What you will need
 ---
 ### Hardware
 
-+ An internet connected computer
++ An internet-connected computer
 
 ### Software
 
