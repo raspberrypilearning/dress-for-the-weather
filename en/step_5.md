@@ -87,7 +87,7 @@ line_number_start: 17
 highlight_lines: 
 ---
 arrive = #What should this number be, to make sure the loop is entered?
-while days not in range(#What number should go in here):
+while arrive not in range(#What number should go in here):
     arrive = int(input("How many days are there (0 - 5) before you arrive? "))
     forecast_date = datetime.now() + timedelta(days = arrive, hours = 3)
 
@@ -110,7 +110,7 @@ line_number_start: 17
 highlight_lines:
 ---
 arrive = 100
-while days not in range(6):
+while arrive not in range(6):
     arrive = int(input("How many days are there (0 - 5) before you arrive? "))
     forecast_date = datetime.now() + timedelta(days = arrive, hours = 3)
 
